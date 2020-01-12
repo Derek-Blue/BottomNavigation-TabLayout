@@ -1,7 +1,5 @@
 package com.example.bottomnavigation_tablayout.Fragment;
 
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -32,12 +30,12 @@ public class PlayFragment extends Fragment {
         final TabLayout tabLayout = view.findViewById(R.id.tab_layout);
         viewPager = view.findViewById(R.id.viewpager);
 
-        //Fragment嵌套Fragment要用getChildFragmentManager
+        //Fragment 嵌套 Fragment 要用 getChildFragmentManager
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getChildFragmentManager(),0);
 
-        viewPagerAdapter.addFragment(new Tool_one_Fragment(), "Page 1");
-        viewPagerAdapter.addFragment(new Tool_two_Fragment(), "Page 2");
-        viewPagerAdapter.addFragment(new Tool_three_Fragment(), "Page 3");
+        viewPagerAdapter.addFragment(new Tab_one_Fragment(), "Page 1");
+        viewPagerAdapter.addFragment(new Tab_two_Fragment(), "Page 2");
+        viewPagerAdapter.addFragment(new Tab_three_Fragment(), "Page 3");
 
         viewPager.setAdapter(viewPagerAdapter);
         tabLayout.setupWithViewPager(viewPager);

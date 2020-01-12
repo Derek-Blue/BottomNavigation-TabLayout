@@ -13,12 +13,13 @@ import com.example.bottomnavigation_tablayout.Fragment.MapFragment;
 import com.example.bottomnavigation_tablayout.Fragment.PeopleFragment;
 import com.example.bottomnavigation_tablayout.Fragment.PlayFragment;
 import com.example.bottomnavigation_tablayout.Fragment.WorkFragment;
+import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView;
-    Fragment selectedFragment = null;
+    Fragment selectedFragment = null;;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,6 +63,14 @@ public class MainActivity extends AppCompatActivity {
                     }
                     return true;
                 }
-            };
+    };
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        //從其他 Activity 返回時的焦點位置
+        getSupportFragmentManager().beginTransaction().replace(R.id.framLayout,new PlayFragment()).commit();
+        bottomNavigationView.getMenu().getItem(0).setChecked(true);
+    }
 }
 

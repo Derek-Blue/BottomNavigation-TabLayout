@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 
 import com.example.bottomnavigation_tablayout.R;
 
-public class Tool_one_Fragment extends Fragment {
+public class Tab_one_Fragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

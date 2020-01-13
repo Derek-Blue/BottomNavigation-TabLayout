@@ -9,16 +9,17 @@
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="?android:attr/windowBackground">
 
         <com.google.android.material.tabs.TabLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/tab_layout"
-            android:background="@color/colorPrimary"
-            app:tabTextColor="#FFF"
-            app:tabSelectedTextColor="@color/colorAccent"
-            app:tabIndicatorColor="@color/colorPrimaryDark"/>
+            android:background="?android:attr/windowBackground"
+            app:tabTextColor="@color/colorBlack200"
+            app:tabSelectedTextColor="@color/colorBlack"
+            app:tabIndicatorColor="@color/colorBlack"/>
 
     </com.google.android.material.appbar.AppBarLayout>
 
